@@ -1,0 +1,30 @@
+.search-container {
+    border: solid 1px #cecece;
+    border-radius: 0.3rem;
+    width: 33rem;
+    display: flex;
+    justify-content: space-between;
+
+    .search-field {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+
+        .search-input {
+            height: 3.5rem;
+            width: 22rem;
+            color: gray;
+            border: none;
+            outline: none;
+
+            &::placeholder {
+                color: #cecece;
+            }
+        }
+    }
+}
+
+.resetBtn {
+    margin-top: 10px !important;
+    text-transform: uppercase !important;
+}

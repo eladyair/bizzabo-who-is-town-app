@@ -1,26 +1,27 @@
 import React from 'react';
-import logo from './logo.svg';
+import { Switch, Route } from 'react-router-dom';
+
+// Semantic Components
+import { Container } from 'semantic-ui-react';
+
+// Styles
 import './App.css';
 
+// Components
+import Home from './pages/home/home';
+import Event from './pages/event/event';
+import Heading from './components/header/header';
+
 function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+    return (
+        <Container>
+            <Heading isLink={true} path='/' />
+            <Switch>
+                <Route exact path='/' component={Home} />
+                <Route exact path='/events/:id' component={Event} />
+            </Switch>
+        </Container>
+    );
 }
 
 export default App;
